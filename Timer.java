@@ -16,7 +16,7 @@ public class Timer {
     }
 
     // Ends the timer
-    public void end()
+    public void stop()
     {
 
     }
