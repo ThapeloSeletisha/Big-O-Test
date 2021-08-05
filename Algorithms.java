@@ -29,13 +29,21 @@ public class Algorithms {
     // returns that number
     public static int linearCount(int[] data, int value)
     {
-        
+        int count = 0;
+        for (int i = 0; i < data.length; i++)
+        {
+            if (data[i] == value)
+            {
+                count++;
+            }
+        }
+        return count;
     }
     // Uses the bubble sort algorithm to sort the array
     // Returns that array
     public static int[] bubbleSort(int[] data)
     {
-
+        
     }
     
 }
