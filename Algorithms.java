@@ -4,6 +4,11 @@ import java.util.Random;
  * that implement algorithms
  */
 public class Algorithms {
+    // The main function initializes an array
+    // with random values and a specified size
+    // It then runs the linearCount method and 
+    // the bubbleSort method
+    // And checks how long each took in milliseconds
     public static void main(String[] args) {
         int size=10000;
         Timer myTimer=new Timer();
@@ -11,7 +16,12 @@ public class Algorithms {
         myTimer.start();
         int position = linearCount(data, 50);
         myTimer.stop();
-        System.out.println("Time : " + myTimer.getTime());
+        System.out.println("Search Time : " + myTimer.getTime());
+        
+        myTimer.start();
+        bubbleSort(data);
+        myTimer.stop();
+        System.out.println("Sort Time : " + myTimer.getTime());
     }
     // Generates an array with random integers
     // Returns the array
@@ -46,7 +56,7 @@ public class Algorithms {
         int temp;
         for (int i = 0; i < data.length; i++)
         {
-            for (int j = i + 1; j < data.length; i++)
+            for (int j = i + 1; j < data.length; j++)
             {
                 if (data[i] > data[j])
                 {
